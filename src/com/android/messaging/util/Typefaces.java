@@ -15,7 +15,10 @@
  */
 package com.android.messaging.util;
 
+import android.content.Context;
 import android.graphics.Typeface;
+
+import com.android.messaging.R;
 
 /**
  * Provides access to typefaces used by code. Specially important for typefaces coming from assets,
@@ -27,18 +30,20 @@ public class Typefaces {
     private static Typeface sRobotoBold;
     private static Typeface sRobotoNormal;
 
-    public static Typeface getRobotoBold() {
+    public static Typeface getRobotoBold(Context context) {
         Assert.isMainThread();
         if (sRobotoBold == null) {
-            sRobotoBold = Typeface.create(Typeface.SANS_SERIF, Typeface.BOLD);
+            sRobotoBold =
+                    Typeface.create(context.getString(R.string.system_body_font), Typeface.BOLD);
         }
         return sRobotoBold;
     }
 
-    public static Typeface getRobotoNormal() {
+    public static Typeface getRobotoNormal(Context context) {
         Assert.isMainThread();
         if (sRobotoNormal == null) {
-            sRobotoNormal = Typeface.create(Typeface.SANS_SERIF, Typeface.NORMAL);
+            sRobotoNormal =
+                    Typeface.create(context.getString(R.string.system_body_font), Typeface.NORMAL);
         }
         return sRobotoNormal;
     }

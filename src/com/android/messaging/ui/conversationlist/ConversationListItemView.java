@@ -165,8 +165,8 @@ public class ConversationListItemView extends FrameLayout implements OnClickList
         mListItemReadColor = resources.getColor(R.color.conversation_list_item_read);
         mListItemUnreadColor = resources.getColor(R.color.conversation_list_item_unread);
 
-        mListItemReadTypeface = Typefaces.getRobotoNormal();
-        mListItemUnreadTypeface = Typefaces.getRobotoBold();
+        mListItemReadTypeface = Typefaces.getRobotoNormal(getContext());
+        mListItemUnreadTypeface = Typefaces.getRobotoBold(getContext());
 
         if (OsUtil.isAtLeastL()) {
             setTransitionGroup(true);
