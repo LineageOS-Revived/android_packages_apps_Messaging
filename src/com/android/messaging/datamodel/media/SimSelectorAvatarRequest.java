@@ -92,7 +92,7 @@ public class SimSelectorAvatarRequest extends AvatarRequest {
         paint.setAlpha(0xff);
 
         if (!TextUtils.isEmpty(identifier)) {
-            paint.setTypeface(Typeface.create("sans-serif", Typeface.NORMAL));
+            paint.setTypeface(Typeface.create("@*android:string/config_bodyFontFamily", Typeface.NORMAL));
             paint.setColor(textColor);
             final float letterToTileRatio =
                     resources.getFraction(R.dimen.sim_identifier_to_tile_ratio, 1, 1);
